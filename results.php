@@ -52,16 +52,17 @@ $dvds = $statement->fetchAll(PDO::FETCH_OBJ);
   <h1>
     You searched for: <?php echo $dvd ?>
   </h1>
+  <?php  
+
+    if (!$dvds) {
+      echo "<h1>Nothing was found <a href=" . '"/index.php' . '"' . ">Go Back</a></h1>";
+    }
+
+  ?>
 </div>
 
 
-<?php  
 
-if (!$dvds) {
-  echo "<h1>Nothing was found <a href=" . '"/index.php' . '"' . ">Go Back</a></h1>";
-}
-
-?>
 
 
 

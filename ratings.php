@@ -50,16 +50,17 @@ $dvds = $statement->fetchAll(PDO::FETCH_OBJ);
   <h1>
     Movies with Rating: <?php echo $rating ?>
   </h1>
+  <?php  
+
+    if (!$rating) {
+      echo "<h1>Nothing was found <a href=" . '"/index.php' . '"' . ">Go Back</a></h1>";
+    }
+
+  ?>
 </div>
 
 
-<?php  
 
-if (!$rating) {
-  echo "<h1>Nothing was found <a href=" . '"/index.php' . '"' . ">Go Back</a></h1>";
-}
-
-?>
 
 
 <!DOCTYPE html>
