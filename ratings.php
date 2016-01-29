@@ -55,8 +55,8 @@ $dvds = $statement->fetchAll(PDO::FETCH_OBJ);
 
 <?php  
 
-if (!$dvds) {
-  echo "<span>Nothing was found <a href=" . '"/index.php' . '"' . ">Go Back</a></span>";
+if (!$rating) {
+  echo "<h1>Nothing was found <a href=" . '"/index.php' . '"' . ">Go Back</a></h1>";
 }
 
 ?>
